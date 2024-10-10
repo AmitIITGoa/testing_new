@@ -1,6 +1,6 @@
 const mongoose =  require ("mongoose") ;
 
-const  mgurl = 'mongodb://localhost:27017/hotels' 
+const  mgurl = "mongodb+srv://amitshinde22042:Amit_422605@test.fcw3c.mongodb.net/"
 
 
 mongoose.connect(mgurl , {
