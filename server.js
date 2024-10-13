@@ -1,5 +1,7 @@
 const  express  =  require("express") ;
 
+require('dotenv').config() ;
+
 const app =  express() ;
 
 const  bodypar = require('body-parser') ;
@@ -18,8 +20,9 @@ const personinfo   =  require('./router/person.js') ;
 
 app.use('/person' ,  personinfo);
 
+const PORT =  process.env.PORT ||  3000 ;
 
-app.listen(3000 , ()=>{
+app.listen(PORT , ()=>{
     console.log("server  start") ;
 }) ;
 
