@@ -1,17 +1,20 @@
-const  mongoose =  require("mongoose") ;
+const mongoose = require('mongoose');
 
-const  menuitem =  new mongoose.Schema({
+const person_detail = new mongoose.Schema({
     name: {
-        type : "string" ,
-        require :  true ,
+        type: String, // Corrected the type to String without quotes
+        required: true, // Changed 'require' to 'required'
     },
-    quantity :{
-        type : "number" ,
-        require :  true ,
+    username: {
+        type: String,
+        required: true, 
+    },
+    password: {
+        type: String, 
+        required: true 
     }
-}) ;
+});
 
+const Person = mongoose.model('Person', person_detail); // Model name should be capitalized
 
-const  menu =  mongoose.model("menu" ,  menuitem) ;
-
-module.exports =  menu ;
+module.exports = Person;

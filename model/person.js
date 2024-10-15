@@ -2,8 +2,16 @@ const  mongoose  =  require('mongoose') ;
 
 const  person_detail=  new mongoose.Schema({
     name: {
-        type : "string" ,
+        type : String ,
         require :  true ,
+    },
+    username : {
+        type: String ,
+        require : true ,
+    },
+    password: {
+        type: String ,
+        require : true 
     }
 }) ;
 
